@@ -1,5 +1,5 @@
   
-##  build.gradle ÅäÖÃĞèÒª
+##  build.gradle é…ç½®éœ€è¦
 
     compile 'io.reactivex:rxjava:1.1.0'
     compile('io.reactivex:rxandroid:1.1.0') {
