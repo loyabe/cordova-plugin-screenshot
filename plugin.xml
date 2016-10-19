@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-screenshot" version="1.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>ScreetShot</name>
+<plugin id="cordova-plugin-screenshot" version="1.2.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ScreenShot</name>
     <author>Abay Zhuang</author>
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
-    <js-module name="ScreetShot" src="www/ScreetShot.js">
-        <clobbers target="cordova.plugins.ScreetShot" />
+    <js-module name="ScreenShot" src="www/ScreenShot.js">
+        <clobbers target="cordova.plugins.ScreenShot" />
     </js-module>
     <!-- Android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="ScreetShot">
+            <feature name="ScreenShot">
                 <param name="android-package" value="com.xmexe.exe.ScreenShot.ScreenShot" />
                 <param name="onload" value="true" />
             </feature>
@@ -23,5 +23,23 @@
         <source-file src="src/android/RxScreenshotDetector.java" target-dir="src/com/xmexe/exe/ScreenShot/" />
         <source-file src="src/android/ScreenShot.java" target-dir="src/com/xmexe/exe/ScreenShot/" />
     </platform>
+
+
+
+   <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ScreenShot">
+                <param name="ios-package" value="ScreenShot"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ScreenShot.h" />
+
+        <source-file src="src/ios/ScreenShot.m"
+            compiler-flags="-fno-objc-arc" />
+    </platform>
+
 
 </plugin>
