@@ -13,8 +13,9 @@
 
 
     //新版本 使用
-    cordova.plugins.ScreenShot.receiveMessageInAndroidCallback = function(data){
-      console.log("ddd " + data );
-      alert("sss " + data);
-      $log.debug("" + data);
-    };
+   cordova.plugins.ScreenShot.receiveScreenShotCallback = function(data){
+                       console.log("ddd " + data );
+                       alert("sss " + data);
+                       $log.debug("" + data);
+                       };
+
